@@ -139,9 +139,9 @@ rPBFT算法目前实现中，轮流将共识委员列表节点替换为验证节
 
 (4) 若节点B的状态落后于节点A，但节点B与其父节点相连，若节点B最多等待[100ms(可配)](../../manual/configuration.html#rpbft)后，状态仍然落后于节点A，则节点B向节点A发出prepareRequest请求，请求相应的Prepare包
 
-(5) 节点B收到节点A的prepareRequest请求后，向其回复相应的Prepare消息包
+(5) 节点A收到节点B的prepareRequest请求后，向其回复相应的Prepare消息包
 
-(6) 节点A收到节点B的Prepare消息包后，执行handlePrepare流程处理收到的Prepare包。
+(6) 节点B收到节点A的Prepare消息包后，执行handlePrepare流程处理收到的Prepare包。
 
 
 ### 流量负载均衡策略
